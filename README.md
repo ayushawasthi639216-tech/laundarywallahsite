@@ -38,8 +38,7 @@ LaundryMart/
 
 ### Clone the Repository
 
-git clone https://github.com/your-username/LaundryMart.git
-
+git clone https://ayushawasthi639216-tech.github.io/laundarywallahsite/
 ### Run the Project
 
 1. Open the project folder
