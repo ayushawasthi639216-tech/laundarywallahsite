@@ -1,69 +1,74 @@
-# 🧺Laundry Wallah Website
+# 🧺 LaundryMart - Modern Laundry Service Website
 
 ## 📌 Project Description
 
-Laundry Wallah is a simple and responsive laundry service website built using HTML and CSS.
-It provides information about services, pricing, and allows users to book laundry services online.
+LaundryMart is a modern and responsive laundry service website built using HTML5 and CSS3. This project was upgraded from a basic laundry website into a professional landing page featuring a modern user interface, improved navigation, and a better user experience.
 
-This project is designed for beginners to understand basic web development concepts like:
-
-* HTML structure
-* CSS styling
-* Forms and user input
-* Tables and layout
+The website allows users to explore laundry services, view pricing details, and submit booking requests through a clean and attractive interface.
 
 ## 🚀 Features
 
-* ✅ Clean and modern UI
-* ✅ List of laundry services
-* ✅ Price table with discounts
-* ✅ Booking form with validation
-* ✅ Responsive design (basic)
-* ✅ Semantic HTML structure
+* ✅ Sticky Navigation Bar
+* ✅ Modern Hero Section
+* ✅ Call-to-Action Button
+* ✅ Smooth Scrolling Navigation
+* ✅ Service Showcase Section
+* ✅ Pricing Table with Discounts
+* ✅ Booking Form
+* ✅ Professional Multi-Column Footer
+* ✅ Responsive Footer Design
+* ✅ Clean and Modern UI/UX
+* ✅ Semantic HTML Structure
 
 ## 🛠️ Technologies Used
 
 * HTML5
 * CSS3
-* 
+
 ## 📂 Project Structure
-Laundry-Wallah/
+
+LaundryMart/
 │── index.html
+│── style.css
+│── images/
+│   └── laundry-image.png
 │── README.md
 
 ## ⚙️ Setup Instructions
 
-### 1️⃣ Clone the Repository
-bash
-git clone https://ayushawasthi639216-tech.github.io/laundarywallahsite/
+### Clone the Repository
 
-### 2️⃣ Open the Project
+git clone https://github.com/your-username/LaundryMart.git
 
-* Go to the project folder
-* Open `index.html` in your browser
+### Run the Project
 
-### 3️⃣ Run Locally
-No installation required ✅
-Just double-click the file or use Live Server in VS Code.
+1. Open the project folder
+2. Open index.html in your browser
 
-## 🌐 Deployment (Netlify)
+OR
 
-### Steps:
-1. Go to Netlify
-2. Click on **"Add new site" → "Deploy manually"**
-3. Drag and drop your project folder
-4. Your site will be live instantly 🎉
+Use Live Server in VS Code for a better development experience.
 
-# 📧 Contact
-For any queries:
-* Phone: 123-456-7890
-* Email: [info@laundrymart.com](mailto:info@laundrymart.com)
+## 🌐 Live Demo
 
-📌 Future Improvements
-* Add backend (form submission)
-* Add login/signup system
-* Improve UI with animations
-* Make fully responsive (mobile-first)
+Add your GitHub Pages or Netlify deployment link here.
 
-⭐ Author
-Created by Ayush Awasthi
+## 📈 Future Improvements
+
+* Add About Us Section
+* Add Testimonials Section
+* Add Service Cards with Icons
+* Connect Form to Backend
+* Add Login & Signup System
+* Improve Mobile Responsiveness
+* Add Animations and Transitions
+
+## 👨‍💻 Author
+
+Ayush Awasthi
+
+Frontend Developer | BCA Student
+
+## ⭐ Support
+
+If you like this project, don't forget to star the repository.
