@@ -1,121 +1,344 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Laundry Wallah</title>
+    <title>Laundry Service</title>
 
     <style>
-        body {
-            font-family: Arial, sans-serif;
+        * {
             margin: 0;
-            background-color: #f4f4f4;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+            scroll-behavior: smooth;
         }
+
+        body {
+            background: #f5f9ff;
+            color: #333;
+        }
+
+        /* HEADER */
 
         header {
-            background: #0077b6;
-            color: white;
-            padding: 20px;
-            text-align: center;
-        }
-
-        main {
-            padding: 20px;
-        }
-
-        section {
-            margin-bottom: 30px;
-        }
-
-        img {
-            display: block;
-            margin: 20px auto;
-            width: 200px;
-        }
-
-        ul {
-            background: white;
-            padding: 15px;
-            border-radius: 10px;
-        }
-
-        table {
-            width: 80%;
-            margin: auto;
-            border-collapse: collapse;
-            background: white;
-        }
-
-        th, td {
-            border: 2px solid #333;
-            padding: 10px;
-            text-align: center;
-        }
-
-        th {
-            background-color: #0077b6;
-            color: white;
-        }
-
-        tr:nth-child(even) {
-            background-color: #e0f7fa;
-        }
-
-        form {
-            background: white;
-            padding: 20px;
-            border-radius: 10px;
-            width: 300px;
-            margin: auto;
-        }
-
-        input, button {
             width: 100%;
-            padding: 10px;
-            margin: 8px 0;
+            height: 80px;
+            background: white;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 80px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
         }
 
-        button {
-            background: #0077b6;
-            color: white;
+        .logo {
+            font-size: 30px;
+            font-weight: bold;
+            color: #0077ff;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: black;
+            margin: 0 20px;
+            font-size: 18px;
+            transition: 0.3s;
+        }
+
+        nav a:hover {
+            color: #0077ff;
+        }
+
+        .user-btn {
+            padding: 10px 20px;
             border: none;
+            background: #0077ff;
+            color: white;
+            border-radius: 25px;
             cursor: pointer;
         }
 
-        button:hover {
-            background: #023e8a;
+        /* HERO SECTION */
+
+        .hero {
+            width: 100%;
+            min-height: 90vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 50px 80px;
         }
 
-        footer {
-            background: #222;
-            color: white;
-            text-align: center;
-            padding: 15px;
+        .left {
+            width: 50%;
+        }
+
+        .left h1 {
+            font-size: 55px;
+            line-height: 1.2;
+        }
+
+        .left span {
+            color: #0077ff;
+        }
+
+        .left p {
             margin-top: 20px;
+            font-size: 18px;
+            color: #555;
+            line-height: 1.6;
+        }
+
+        .cta {
+            margin-top: 30px;
+            padding: 15px 30px;
+            border: none;
+            background: #0077ff;
+            color: white;
+            border-radius: 30px;
+            font-size: 18px;
+            cursor: pointer;
+        }
+
+        .cta:hover {
+            background: #005fd1;
+        }
+
+        .right {
+            width: 50%;
+            text-align: center;
+        }
+
+        .right img {
+            width: 90%;
+            max-width: 500px;
+        }
+
+        /* SECTIONS */
+
+        section {
+            padding: 60px 80px;
+        }
+
+        section h2 {
+            font-size: 35px;
+            color: #0077ff;
+            margin-bottom: 25px;
+        }
+
+        ul {
+            padding-left: 30px;
+        }
+
+        ul li {
+            font-size: 20px;
+            margin-bottom: 15px;
+        }
+
+        /* TABLE */
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            background: white;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        th {
+            background: #0077ff;
+            color: white;
+        }
+
+        th,
+        td {
+            border: 1px solid #ddd;
+            padding: 15px;
+            text-align: center;
+        }
+
+        tr:nth-child(even) {
+            background: #f2f2f2;
+        }
+
+        /* FORM */
+
+        form {
+            width: 500px;
+            background: white;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        form label {
+            display: block;
+            margin-top: 15px;
+            font-size: 18px;
+        }
+
+        form input {
+            width: 100%;
+            padding: 12px;
+            margin-top: 8px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+        }
+
+        form button {
+            width: 100%;
+            padding: 15px;
+            margin-top: 25px;
+            border: none;
+            background: #0077ff;
+            color: white;
+            font-size: 18px;
+            border-radius: 8px;
+            cursor: pointer;
+        }
+
+        form button:hover {
+            background: #005fd1;
+        }
+
+        /* FOOTER */
+
+        footer {
+            background: #111;
+            color: white;
+            padding: 50px 80px 20px;
+        }
+
+        .footer-container {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 40px;
+        }
+
+        .footer-box {
+            width: 220px;
+        }
+
+        .footer-box h2 {
+            color: #0077ff;
+            margin-bottom: 20px;
+        }
+
+        .footer-box h3 {
+            margin-bottom: 20px;
+            color: #fff;
+        }
+
+        .footer-box p {
+            color: #ccc;
+            line-height: 1.7;
+        }
+
+        .footer-box a {
+            display: block;
+            text-decoration: none;
+            color: #ccc;
+            margin-bottom: 12px;
+            transition: 0.3s;
+        }
+
+        .footer-box a:hover {
+            color: #0077ff;
+            transform: translateX(5px);
+        }
+
+        hr {
+            margin: 30px 0 20px;
+            border: 0.5px solid #333;
+        }
+
+        .copyright {
+            text-align: center;
+            color: #aaa;
+        }
+
+        /* Responsive */
+
+        @media(max-width:768px) {
+
+            footer {
+                padding: 40px 20px;
+            }
+
+            .footer-container {
+                flex-direction: column;
+            }
+
+            .footer-box {
+                width: 100%;
+            }
+
         }
     </style>
+
 </head>
 
 <body>
 
-<header>
-    <h1><i>Welcome to Laundry Wallah</i></h1>
-</header>
+    <!-- HEADER -->
 
-<main>
+    <header>
 
-    <section>
-        <p>
-            Welcome to Laundry Wallah / Laundry Mart, your trusted partner for clean, crisp, 
-            and perfectly cared-for clothes. We treat every garment with expert care and 
-            premium-quality cleaning.
-        </p>
+        <div class="logo">LaundryMart</div>
 
-        <img src="https://static.vecteezy.com/system/resources/previews/026/721/193/non_2x/washing-machine-and-laundry-laundry-sticker-png.png" alt="Laundry Image">
+        <nav>
+            <a href="#home">Home</a>
+            <a href="#services">Services</a>
+            <a href="#about">About Us</a>
+            <a href="#contact">Contact Us</a>
+        </nav>
+
+        <button class="user-btn">Username</button>
+
+    </header>
+
+    <!-- HERO -->
+
+    <section class="hero" id="home">
+
+        <div class="left">
+
+            <h1>
+                Revitalize Your <br>
+                Clothes with Expert <br>
+                <span>Laundry Services!</span>
+            </h1>
+
+            <p>
+                From premium dry cleaning to swift wash and fold, we deliver care and convenience.
+                Schedule a pickup and rediscover the freshness of your clothes today!
+            </p>
+
+            <button class="cta">
+                Book a service today!
+            </button>
+
+        </div>
+
+        <div class="right">
+
+            <img src="2.png" alt="Laundry Image">
+
+        </div>
+
     </section>
 
-    <section>
-        <h2>Our Services:</h2>
+    <!-- SERVICES -->
+
+    <section id="services">
+
+        <h2>Our Services</h2>
+
         <ul>
             <li>Washing and Drying</li>
             <li>Ironing and Folding</li>
@@ -125,88 +348,142 @@
             <li>Stain Removal Services</li>
             <li>Custom Cleaning Solutions</li>
         </ul>
+
     </section>
 
-    <section>
-        <h2>Price List:</h2>
+    <!-- PRICE LIST -->
+
+    <section id="price-list">
+
+        <h2>Price List</h2>
 
         <table>
+
             <tr>
                 <th>S.No</th>
-                <th>Services</th>
+                <th>Service</th>
                 <th>Price</th>
                 <th>Discount</th>
             </tr>
+
             <tr>
                 <td>1</td>
                 <td>Washing and Drying</td>
                 <td>₹50</td>
                 <td>10%</td>
             </tr>
+
             <tr>
                 <td>2</td>
                 <td>Ironing and Folding</td>
                 <td>₹40</td>
                 <td>5%</td>
             </tr>
+
             <tr>
                 <td>3</td>
                 <td>Dry Cleaning</td>
                 <td>₹80</td>
                 <td>15%</td>
             </tr>
+
             <tr>
                 <td>4</td>
                 <td>Stain Removal</td>
                 <td>₹30</td>
                 <td>5%</td>
             </tr>
-            <tr>
-                <td>5</td>
-                <td>Custom Cleaning</td>
-                <td>₹100</td>
-                <td>20%</td>
-            </tr>
-            <tr>
-                <td>6</td>
-                <td>Pickup & Delivery</td>
-                <td>₹20</td>
-                <td>5%</td>
-            </tr>
-            <tr>
-                <td>7</td>
-                <td>Delicate Fabric Care</td>
-                <td>₹50</td>
-                <td>10%</td>
-            </tr>
+
         </table>
+
     </section>
 
-    <section>
-        <h2>Book Now:</h2>
+    <!-- BOOK NOW -->
+
+    <section id="book-now">
+
+        <h2>Book Now</h2>
 
         <form>
-            <label>Name:</label>
-            <input type="text" placeholder="Your Name" required>
 
-            <label>Phone:</label>
-            <input type="tel" placeholder="1234567890" required>
+            <label>Name</label>
+            <input type="text" placeholder="Enter your name">
 
-            <label>Email:</label>
-            <input type="email" placeholder="you@example.com" required>
+            <label>Phone</label>
+            <input type="tel" placeholder="Enter phone number">
 
-            <button type="submit">Submit</button>
+            <label>Email</label>
+            <input type="email" placeholder="Enter email">
+
+            <button type="submit">
+                Submit
+            </button>
+
         </form>
+
     </section>
 
-</main>
+    <!-- FOOTER -->
 
-<footer>
-    <p>Contact: 123-456-7890 | Email: info@laundrymart.com</p>
-</footer>
+    <footer id="contact">
+
+        <div class="footer-container">
+
+            <div class="footer-box">
+
+                <h2>LaundryMart</h2>
+
+                <p>
+                    We provide premium laundry and dry cleaning services with fast pickup and delivery.
+                </p>
+
+            </div>
+
+            <div class="footer-box">
+
+                <h3>Quick Links</h3>
+
+                <a href="#home">Home</a>
+                <a href="#services">Services</a>
+                <a href="#about">About Us</a>
+                <a href="#contact">Contact Us</a>
+
+            </div>
+
+            <div class="footer-box">
+
+                <h3>Contact</h3>
+
+                <p>📞 +91 1234567890</p>
+                <p>📧 info@laundrymart.com</p>
+                <p>📍 Lucknow, India</p>
+
+            </div>
+
+            <div class="footer-box">
+
+                <h3>Follow Us</h3>
+
+                <a href="#">Instagram</a>
+                <a href="#">Facebook</a>
+                <a href="#">Twitter</a>
+
+            </div>
+
+        </div>
+
+        <hr>
+
+        <div class="copyright">
+
+            <p>
+                © 2026 LaundryMart | All Rights Reserved
+            </p>
+
+        </div>
+
+    </footer>
 
 </body>
+
 </html>
-
-
-
